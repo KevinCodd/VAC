@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Voice Activated Chess</title>
+  <style>
+    body {
+      width: 300px;
+      height: 200px;
+      margin: 0;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+    }
+    .label-text {
+      font-size: 18px; 
+      font-family: 'Helvetica', monospace; 
+      margin-left: 10px; 
+    }
+    .toggle-container {
+      margin-bottom: 15px;
+      text-align: left; 
+      display: flex; 
+      align-items: center; 
+    }
+  </style>
+</head>
+<body>
+  <h1>Voice Activated Chess</h1>
+  <div class="toggle-container">
+    <input type="checkbox" id="hideBoard">
+    <label class="label-text" for="hideBoard">Hide Board</label>
+  </div>
+  <div class="toggle-container">
+    <input type="checkbox" id="hideMoveHistory">
+    <label class="label-text" for="hideMoveHistory">Hide Move History</label>
+  </div>
+  <div class="toggle-container">
+    <input type="checkbox" id="hideMaterial">
+    <label class="label-text" for="hideMaterial">Hide Material</label>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

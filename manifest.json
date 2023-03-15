@@ -3,14 +3,19 @@
   "description": "Voice activated chess @ lichess",
   "version": "1.0",
   "manifest_version": 3,
+
+  "action": {
+    "default_popup": "popup.html"
+  },
   "background": {
     "service_worker": "background.js"
   },
-  "permissions": ["tts", "debugger"],
+  "permissions": ["tts", "debugger", "scripting", "activeTab"],
   "content_scripts": [
     {
       "matches" : ["https://lichess.org/*"],
-      "js": [  "annyang.min.js", "input.js"]
+      "css": ["blocker.css"],
+      "js": [  "annyang.min.js", "input.js", "blocker.js"]
     }
   ]
 }
